@@ -8131,11 +8131,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Hp\\Desktop\\AB106CSharp\\Pronia\\Pronia\\Pronia.csproj",
+      "projectUniqueName": "C:\\Users\\Hp\\Desktop\\Proniiaa\\Pronia\\Pronia.csproj",
       "projectName": "Pronia",
-      "projectPath": "C:\\Users\\Hp\\Desktop\\AB106CSharp\\Pronia\\Pronia\\Pronia.csproj",
+      "projectPath": "C:\\Users\\Hp\\Desktop\\Proniiaa\\Pronia\\Pronia.csproj",
       "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Hp\\Desktop\\AB106CSharp\\Pronia\\Pronia\\obj\\",
+      "outputPath": "C:\\Users\\Hp\\Desktop\\Proniiaa\\Pronia\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",

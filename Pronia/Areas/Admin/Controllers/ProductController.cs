@@ -40,9 +40,9 @@ public class ProductController(ProniaContext _context, IWebHostEnvironment _env)
         if (data.ImageFile != null)
         {
             if (!data.ImageFile.IsValidType("image"))
-                ModelState.AddModelError("ImageFile","Fayl şəkil formatında olmalıdır.");
+                ModelState.AddModelError("ImageFile","Fayl sekil formatinda olmalidir.");
             if (!data.ImageFile.IsValidLength(300))
-                ModelState.AddModelError("ImageFile","Faylın ölçüsü 200kb-dan çox olmamalıdır.");
+                ModelState.AddModelError("ImageFile","Faylin olcusu 200kb-den cox olmamalidir.");
         }
         bool isImageValid = true;
         StringBuilder sb = new StringBuilder();
@@ -50,12 +50,12 @@ public class ProductController(ProniaContext _context, IWebHostEnvironment _env)
         {
             if (!img.IsValidType("image"))
             {
-                sb.Append("-" + img.FileName + " faylı şəkil formatında olmalıdır.");
+                sb.Append("-" + img.FileName + " Fayli sekil formatinda olmalidir.");
                 isImageValid = false;
             }
             if (!img.IsValidLength(300))
             {
-                sb.Append("-" + img.FileName + " faylının ölçüsü 200kb-dan çox olmamalıdır.");
+                sb.Append("-" + img.FileName + " Faylinin olcusu 200kb-den cox olmamalidir.");
                 isImageValid = false;
             }
         }

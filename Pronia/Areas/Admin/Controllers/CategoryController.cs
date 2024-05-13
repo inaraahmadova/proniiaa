@@ -9,7 +9,7 @@ namespace Pronia.Areas.Admin.Controllers
     [Area("Admin")]
     public class CategoryController(ProniaContext _sql) : Controller
     {
-        // GET: CategoryController
+
         public async Task<IActionResult> Index()
         {
             return View(await _sql.Categories.Select(c => new GetCategoryVM
@@ -18,7 +18,7 @@ namespace Pronia.Areas.Admin.Controllers
                 Name = c.Name,
             }).ToListAsync());
         }
-        // GET: CategoryController/Create
+
         public ActionResult Create()
         {
             return View();
@@ -26,10 +26,8 @@ namespace Pronia.Areas.Admin.Controllers
         [HttpPost]
         public async Task<ActionResult> Create(CreateCategoryVM vm)
         {
-            if (vm.Name != null && await _sql.Categories.AnyAsync(c=> c.Name == vm.Name))
-            {
-                ModelState.AddModelError("Name", "Ad mövcuddur");
-            }
+            if (vm.Name != null && await _sql.Categories.AnyAsync(c => c.Name == vm.Name))
+            { ModelState.AddModelError("Name", "Ad movcuddur"); }
             if (!ModelState.IsValid)
             {
                 return View(vm);
@@ -44,13 +42,12 @@ namespace Pronia.Areas.Admin.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        // GET: CategoryController/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: CategoryController/Edit/5
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
@@ -65,13 +62,14 @@ namespace Pronia.Areas.Admin.Controllers
             }
         }
 
-        // GET: CategoryController/Delete/5
+        
+
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: CategoryController/Delete/5
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)
